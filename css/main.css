@@ -39,9 +39,6 @@
   color: #1c1c33;
   font-family: 'Noto Sans', sans-serif; }
 
-html {
-  /*scroll-behavior: smooth;*/ }
-
 body, .bg-body {
   background: #f6f6f6; }
 
@@ -49,10 +46,11 @@ a, a:hover {
   color: black;
   text-decoration: none; }
 
-button:not(.navbar-toggler):not(.btn-secondary), button:focus {
+button:not(.navbar-toggler):not(.btn-secondary) {
   min-width: 180px;
   box-shadow: 0 7px 15px rgba(9, 204, 102, 0.33);
-  padding: 12px 40px !important;
+  padding: 12px 40px !important; }
+button:focus {
   outline: none; }
 
 .l-spacin-n2 {
