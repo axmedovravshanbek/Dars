@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Artel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="plugins/OwlCarousel2-2.3.4/OwlCarousel2-2.3.4/dist/assets/owl.carousel.css">
+    <link rel="stylesheet" href="plugins/OwlCarousel2-2.3.4/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.css">
+    <link rel="icon" href="images/logomini.svg">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body onmousemove="showCoords(event)" style="position:relative;" onmouseout="clearCoor()">
+
+<div class="container-fluid bg-white">
+    <div class="container">
+        <nav class="navbar p-0 row justify-content-between navbar-expand-md">
+            <div class="d-flex align-items-center pl-2">
+                <a class="navbar-brand mx-0 my-2" href="#">
+                    <img src="images/brand.svg" alt="">
+                </a>
+                <div class="desktop">
+                    <ul class="navbar-nav d-flex">
+                        <li class="ml-5 nav-item">
+                            <a class="nav-link mr-md-5 px-0 py-4" href="#">Категории</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mr-md-5 px-0 py-4" href="#">Партнеры</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mr-md-5 px-0 py-4" href="#">Сервисные центры</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mr-md-5 px-0 py-4" href="#">Новости</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mr-md-5 px-0 py-4" href="#">Вакансии</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mr-md-5 px-0 py-4" href="#">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex justify-content-end pr-2">
+                <div class="desktop">
+                    <div class="position-relative d-flex align-items-center">
+                        <div id="demo2" class="bra rounded-pill p-2 miniwidth">
+                            <input type="text" class="px-2" placeholder="Чего Вы ищите?">
+                        </div>
+                        <img id="searchicon" class="rounded-pill pointer bra p-2 position-absolute" data-target="#demo2"
+                             src="images/search.svg" alt="">
+                    </div>
+                </div>
+                <img class="ml-3 ml-md-4 rounded-pill bra p-2 pointer" src="images/heart.svg" alt="">
+                <img class="ml-3 ml-md-4 rounded-pill bra p-2 pointer" src="images/basket.svg" alt="">
+                <img class="desktop ml-4 rounded-pill bra p-2 pointer ml-md-3" src="images/exit.svg" alt="">
+                <button class="navbar-toggler justify-content-start ml-md-4 ml-3 align-items-center" type="button"
+                        data-toggle="collapse"
+                        data-target="#collapsibleNavbar">
+                    <img src="images/menu.svg" alt="">
+                </button>
+                <!---->
+            </div>
+            <div class="d-md-none w-100">
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav d-flex align-items-center w-100">
+                        <li class="btn btn-block py-3 bg-dark nav-item">
+                            <a class="nav-link text-white p-0" href="#">Women</a>
+                        </li>
+                        <li class="btn btn-block py-3 bg-dark nav-item">
+                            <a class="nav-link text-white  p-0" href="#">Men</a>
+                        </li>
+                        <li class="btn btn-block py-3 bg-dark nav-item">
+                            <a class="nav-link text-white  p-0" href="#">Kids</a>
+                        </li>
+                        <li class="btn btn-block py-3 bg-dark nav-item">
+                            <a class="nav-link text-white  p-0" href="#">Select</a>
+                        </li>
+                        <li class="btn btn-block py-3 bg-dark nav-item">
+                            <a class="nav-link text-white  p-0" href="#">Outlet</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div><!--navbar-->
+<div class="container-fluid d-md-none border-bottom border-top bg-white">
+    <div class="container">
+        <div class="d-flex align-items-center">
+            <label for="in" class="mb-0 mr-3">
+                <img src="images/search.svg" alt="">
+            </label>
+            <input type="text" id="in" class="py-3" placeholder="Какую технику Вы ищите?">
+        </div>
+    </div>
+</div>
+
+<!---->
+<div class="container-fluid d-flex bg-secondary">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div id="demo" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ul class="carousel-indicators">
+                        <li data-target="#demo" data-slide-to="0" class="active"></li>
+                        <li data-target="#demo" data-slide-to="1"></li>
+                        <li data-target="#demo" data-slide-to="2"></li>
+                        <li data-target="#demo" data-slide-to="3"></li>
+                        <li data-target="#demo" data-slide-to="4"></li>
+                    </ul>
+                    <!-- The slideshow -->
+                    <div class="carousel-inner" style="perspective: 600px; transform: translateZ(-600px)">
+                        <div class="carousel-item active" style="perspective: 600px">
+                            <div class="row">
+                                <div class="col-5 desktop">
+                                    <div class="d-flex h-100 flex-column justify-content-center">
+                                        <div class="font-size-80 l-spacin-n2 font-weight-bold mb-4">Эффектный просмотр
+                                        </div>
+                                        <div class="font-size-20 mb-4">Полное погружение с телевизорами Artel 8K</div>
+                                        <div class="d-flex mt-5 align-items-center">
+                                            <button class="btn btn-success font-size-20">Купить онлайн</button>
+                                            <button class="btn font-size-20" style="box-shadow: none">Узнать больше
+                                                <img src="images/rr.svg" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-7 col-12">
+                                    <div class="parallax mx-md-5 position-relative" id="kkk">
+                                        <img id="sky" class="position-absolute" src="images/sky1.jpg" alt="">
+                                        <img class="position-absolute w-100" src="images/tvtop3.png" alt="">
+                                        <img id="fire" class="position-absolute" src="images/firee.png" alt="">
+                                        <img id="yoda" class="position-absolute" src="images/yoda.png" alt="">
+                                        <img id="vader" class="position-absolute" src="images/vader.jpg" alt="">
+                                        <img class="position-absolute w-100" src="images/tvbottom3.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" style="perspective: 600px">
+                            <div class="row">
+                                <div class="col-5 desktop">
+                                    <div class="d-flex h-100 flex-column justify-content-center">
+                                        <div class="font-size-80 l-spacin-n2 font-weight-bold mb-4">Эффектный просмотр
+                                        </div>
+                                        <div class="font-size-20 mb-4">Полное погружение с телевизорами Artel 8K</div>
+                                        <div class="d-flex mt-5 align-items-center">
+                                            <button class="btn btn-success font-size-20">Купить онлайн</button>
+                                            <button class="btn font-size-20" style="box-shadow: none">Узнать больше
+                                                <img src="images/rr.svg" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-7 col-12">
+                                    <div class="parallax mx-md-5 position-relative">
+                                        <img id="sy" class="position-absolute w-100" src="images/nar.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Left and right controls -->
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                        <img src="images/rr.svg" style="transform: rotate(180deg) scale(1.5)" alt="">
+                    </a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                        <img src="images/rr.svg" style="transform: scale(1.5)" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 d-md-none mb-5">
+                <div class="d-flex h-100 flex-column justify-content-center">
+                    <div class="font-size-40 text-center l-spacin-n2 font-weight-bold mb-2">Эффектный просмотр
+                    </div>
+                    <div class="font-size-16 l-spacin-n2 mb-3">Полное погружение с телевизорами Artel 8K</div>
+                    <div class="d-flex mt-3 flex-column align-items-center">
+                        <button class="btn btn-success mb-4 font-size-20">Купить онлайн</button>
+                        <button class="btn font-size-20" style="box-shadow: none">Узнать больше
+                            <img src="images/rr.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!--carusel-->
+<div class="bg-body">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mt-5 mb-3 d-flex align-items-center justify-content-between">
+                <div id="infowindow" class="font-size-40">Категории</div>
+                <div class="d-flex align-items-center pointer">
+                    <div class="font-size-20 desktop">Посмотреть</div>
+                    <div class="font-size-20 desktop" style="width: 10px;"></div>
+                    <div class="font-size-20"> все</div>
+                    <div class="">
+                        <img src="images/rr1.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-12 col-lg-6 position-relative">
+                <div class="desktop">
+                    <div class="font-size-44 bottom-text p-3 bottom-text1 pb-md-4 pl-4 pr-5 d-flex align-items-center justify-content-center text-white position-absolute">
+                        Мелкая бытовая техника
+                    </div>
+                </div>
+                <img src="images/utuk.png" alt="" class="w-100 rounded">
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="row pt-lg-0 pt-2">
+                    <div class="col-6 position-relative overflow-hidden">
+                        <div class="font-size-24 d-flex align-items-center justify-content-center bottom-text p-3 text-white position-absolute">
+                            Телефоны
+                        </div>
+                        <img src="images/telefon.png" alt="" class="img-fluid rounded">
+                    </div>
+                    <div class="col-6 position-relative overflow-hidden">
+                        <div class="font-size-24 d-flex align-items-center justify-content-center bottom-text p-3 text-white position-absolute">
+                            Телевизоры
+                        </div>
+                        <img src="images/televizor.png" alt="" class="img-fluid rounded">
+                    </div>
+                </div>
+                <div class="row pt-lg-3 pt-2">
+                    <div class="col-6 position-relative overflow-hidden">
+                        <div class="font-size-24 d-flex align-items-center justify-content-center bottom-text p-3 text-white position-absolute">
+                            Печи
+                        </div>
+                        <img src="images/pechi.png" alt="" class="img-fluid rounded">
+                    </div>
+                    <div class="col-6 position-relative overflow-hidden">
+                        <div class="font-size-24 d-flex align-items-center justify-content-center bottom-text p-3 text-white position-absolute">
+                            Холодильники
+                        </div>
+                        <img src="images/xolod.png" alt="" class="img-fluid rounded">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-12 mb-4 d-flex justify-content-center">
+                <button class="btn font-size-20 font-weight-bold btn-success">Еще</button>
+            </div>
+        </div>
+    </div><!--utuklar-->
+</div>
+
+<div class="container-fluid pt-3 bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-md-3 py-5 d-flex flex-column align-items-center">
+                <img src="images/medal1.svg" alt="" class="medal mb-2 rounded-pill p-4">
+                <div class="font-size-18 text-center px-1"
+                     style="font-size: 18px; line-height: 32px; letter-spacing: -0.02em; color: #1C1C33;">Самый крупный
+                    производитель в Средней Азии
+                </div>
+            </div>
+            <div class="col-6 col-md-3 py-5 d-flex flex-column align-items-center">
+                <img src="images/medal2.svg" alt="" class="medal mb-2 rounded-pill p-4">
+                <div class="font-size-18 text-center px-1"
+                     style="font-size: 18px; line-height: 32px; letter-spacing: -0.02em; color: #1C1C33;">Бесплатная
+                    доставка по Узбекистану
+                </div>
+            </div>
+            <div class="col-6 col-md-3 py-5 d-flex flex-column align-items-center">
+                <img src="images/medal3.svg" alt="" class="medal mb-2 rounded-pill p-4">
+                <div class="font-size-18 text-center px-1"
+                     style="font-size: 18px; line-height: 32px; letter-spacing: -0.02em; color: #1C1C33;">3 года
+                    гарантии и бесплатного обслуживания
+                </div>
+            </div>
+            <div class="col-6 col-md-3 py-5 d-flex flex-column align-items-center">
+                <img src="images/medal4.svg" alt="" class="medal mb-2 rounded-pill p-4">
+                <div class="font-size-18 text-center px-1"
+                     style="font-size: 18px; line-height: 32px; letter-spacing: -0.02em; color: #1C1C33;">Круглосуточная
+                    техническая поддержка
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!--medallar-->
+
+<div class="bg-body">
+    <div class="container pb-5">
+        <div class="row">
+            <div class="col-12 mt-5 mb-3 d-flex align-items-center justify-content-between">
+                <div class="font-size-40">Популярные товары</div>
+                <div class="d-flex align-items-center pointer">
+                    <div class="font-size-20 desktop">Посмотреть</div>
+                    <div class="font-size-20 desktop" style="width: 10px;"></div>
+                    <div class="font-size-20"> все</div>
+                    <div class="">
+                        <img src="images/rr1.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-3">
+                <div class="rounded d-flex mb-4 flex-column bg-white p-4">
+                    <img src="images/pop1.png" alt="" class="p-3">
+                    <div class="font-size-16 mt-4 mb-2">Микроволновая печь Artel 23MX39</div>
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex">
+                            <img src="images/star.svg" alt="">
+                            <img src="images/star.svg" alt="">
+                            <img src="images/star.svg" alt="">
+                            <img src="images/star.svg" alt="">
+                            <img src="images/star.svg" alt="">
+                        </div>
+                        <div class="dotted font-size-14 align-items-center pointer">
+                            Отзывы
+                        </div>
+                    </div>
+                    <div class="font-size-22 mt-4 l-spacin-n2">1 500 000 сум</div>
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex rounded-pill dubl my-2">
+                            <img src="images/heartoutline.svg" alt="">
+                            <div class="divider"></div>
+                            <img src="images/tarozi.svg" alt="">
+                        </div>
+                        <div class="d-flex rounded-pill bg-success my-2">
+                            <img src="images/basket.svg" alt="" style="filter: brightness(0) invert(1); padding: 13px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3">
+                <div class="rounded d-flex mb-4 flex-column bg-white p-4">
+                    <img src="images/pop2.png" alt="" class="p-3">
+                    <div class="font-size-16 mt-4 mb-2">Электрический чайный
+                        набор ART-TM-168
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex">
+                            <img src="images/star.svg" alt="">
+                            <img src="images/star.svg" alt="">
+                            <img src="images/star.svg" alt="">
+                            <img src="images/star.svg" alt="">
+                            <img src="images/star.svg" alt="">
+                        </div>
+                        <div class="dotted font-size-14 align-items-center pointer">
+                            Отзывы
+                        </div>
+                    </div>
+                    <div class="font-size-22 mt-4 l-spacin-n2">300 000 сум</div>
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex rounded-pill dubl my-2">
+                            <img src="images/heartoutline.svg" alt="">
+                            <div class="divider"></div>
+                            <img src="images/tarozi.svg" alt="">
+                        </div>
+                        <div class="d-flex rounded-pill bg-success my-2">
+                            <img src="images/basket.svg" alt="" style="filter: brightness(0) invert(1); padding: 13px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3">
+                <div class="rounded d-flex mb-4 flex-column bg-white p-4">
+                    <img src="images/pop3.png" alt="" class="p-3">
+                    <div class="font-size-16 mt-4 mb-2">Artel TV UA75H3502 (190 см)
+                        Android
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex">
+                            <img src="images/star.svg" alt="">
+                            <img src="images/star.svg" alt="">
+                            <img src="images/star.svg" alt="">
+                            <img src="images/star.svg" alt="">
+                            <img src="images/star.svg" alt="">
+                        </div>
+                        <div class="dotted font-size-14 align-items-center pointer">
+                            Отзывы
+                        </div>
+                    </div>
+                    <div class="font-size-22 mt-4 l-spacin-n2">3 000 000 сум</div>
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex rounded-pill dubl my-2">
+                            <img src="images/heartoutline.svg" alt="">
+                            <div class="divider"></div>
+                            <img src="images/tarozi.svg" alt="">
+                        </div>
+                        <div class="d-flex rounded-pill bg-success my-2">
+                            <img src="images/basket.svg" alt="" style="filter: brightness(0) invert(1); padding: 13px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3">
+                <div class="rounded d-flex mb-4 flex-column bg-white p-4">
+                    <img src="images/pop4.png" alt="" class="p-3">
+                    <div class="font-size-16 mt-4 mb-2">Автоматическая стиральная
+                        машина Artel 60C101-I-WH
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex">
+                            <img src="images/star.svg" alt="">
+                            <img src="images/star.svg" alt="">
+                            <img src="images/star.svg" alt="">
+                            <img src="images/star.svg" alt="">
+                            <img src="images/star.svg" alt="">
+                        </div>
+                        <div class="dotted font-size-14 align-items-center pointer">
+                            Отзывы
+                        </div>
+                    </div>
+                    <div class="font-size-22 mt-4 l-spacin-n2">6 000 000 сум</div>
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex rounded-pill dubl my-2">
+                            <img src="images/heartoutline.svg" alt="">
+                            <div class="divider"></div>
+                            <img src="images/tarozi.svg" alt="">
+                        </div>
+                        <div class="d-flex rounded-pill bg-success my-2">
+                            <img src="images/basket.svg" alt="" style="filter: brightness(0) invert(1); padding: 13px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 mb-4 d-flex justify-content-center">
+                <button class="btn font-size-20 font-weight-bold font-italic btn-success">Купить онлайн</button>
+            </div>
+        </div>
+    </div><!--poptovar-->
+</div>
+
+<div class="container-fluid pt-5 bg-white">
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-12 mt-5 mb-3 d-flex align-items-center justify-content-between">
+                <div class="font-size-40">Наши партнеры</div>
+                <div class="d-flex align-items-center pointer">
+                    <div class="font-size-20">Подробнее</div>
+                    <div class="">
+                        <img src="images/rr1.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row py-5">
+            <div class="col-12 col-md-3 d-flex justify-content-center">
+                <img src="images/partner1.svg" alt="" class="my-md-5 py-md-5 py-4">
+            </div>
+            <div class="col-12 col-md-3 d-flex justify-content-center">
+                <img src="images/partner2.svg" alt="" class="my-md-5 py-md-5 py-4">
+            </div>
+            <div class="col-12 col-md-3 d-flex justify-content-center">
+                <img src="images/partner3.svg" alt="" class="my-md-5 py-md-5 py-4">
+            </div>
+            <div class="col-12 col-md-3 d-flex justify-content-center">
+                <img src="images/partner4.svg" alt="" class="my-md-5 py-md-5 py-4">
+            </div>
+        </div>
+    </div>
+</div><!--sponsor-->
+
+<div class="bg-body">
+    <div class="container pt-md-5 pb-5" id="hider">
+        <div class="row py-5">
+            <div class="col-12 col-md-6 pt-5 mb-md-5 d-flex justify-content-center">
+                <button class="btn my-md-5 font-weight-normal btn-success">
+                    <img src="images/call.svg" alt="">
+                    Онлайн консультация
+                </button>
+            </div>
+            <div class="col-12 col-md-6  mt-5 mb-md-5 d-flex justify-content-center">
+                <button class="btn my-md-5 font-weight-normal btn-warning">
+                    <img src="images/sales.svg" alt="">
+                    Подписаться на акции
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="fullHeight" class="bg-success fixed-bottom">
+    <footer class="container-fluid bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-12 d-md-none px-4">
+                    <div class="d-flex flex-column">
+                        <div class="d-flex align-items-center pt-5 pb-4">
+                            <img src="images/qrcode.png" alt="">
+                            <div class="ml-3 l-spacin-n2 font-size-24">
+                                Скачать
+                                приложение Artel
+                            </div>
+                        </div>
+                        <div class="d-flex mb-5">
+                            <img src="images/appstore.png" class="mr-4" alt="">
+                            <img src="images/googleplay.png" alt="">
+                        </div>
+                        <div class="d-flex justify-content-between py-4">
+                            <img src="images/facebook.png" alt="">
+                            <img src="images/instagram.png" alt="">
+                            <img src="images/telegram.png" alt="">
+                        </div>
+                        <button class="btn btn-secondary py-3 my-5 font-size-14 px-1">Скачать весь каталог продукции
+                            <img src="images/download.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-8 col-12">
+                    <div class="row">
+                        <div class="col-md-4 my-5 col-12">
+                            <div class="font-size-16">О компании</div>
+                            <div class="row">
+                                <div class="col-6 mt-3 col-md-12">
+                                    <a href="">
+                                        <div class="font-size-16">Гарантии качества</div>
+                                    </a>
+                                </div>
+                                <div class="col-6 mt-3 col-md-12">
+                                    <a href="">
+                                        <div class="font-size-16">Адреса и контакты</div>
+                                    </a>
+                                </div>
+                                <div class="col-6 mt-3 col-md-12">
+                                    <a href="">
+                                        <div class="font-size-16">Производство</div>
+                                    </a>
+                                </div>
+                                <div class="col-6 mt-3 col-md-12">
+                                    <a href="">
+                                        <div class="font-size-16">Принципы</div>
+                                    </a>
+                                </div>
+                                <div class="col-6 mt-3 col-md-12">
+                                    <a href="">
+                                        <div class="font-size-16">Новости</div>
+                                    </a>
+                                </div>
+                                <div class="col-6 mt-3 col-md-12">
+                                    <a href="">
+                                        <div class="font-size-16">Медиа</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 my-5 col-12">
+                            <div class="font-size-16">Все категории</div>
+                            <div class="row">
+                                <div class="col-6 mt-3 col-md-12">
+                                    <a href="">
+                                        <div class="font-size-16">Мелакая бытовая техника</div>
+                                    </a>
+                                </div>
+                                <div class="col-6 mt-3 col-md-12">
+                                    <a href="">
+                                        <div class="d-flex align-items-center h-100 font-size-16">Телефоны</div>
+                                    </a>
+                                </div>
+                                <div class="col-6 mt-3 col-md-12">
+                                    <a href="">
+                                        <div class="font-size-16">Телевизоры</div>
+                                    </a>
+                                </div>
+                                <div class="col-6 mt-3 col-md-12">
+                                    <a href="">
+                                        <div class="font-size-16">Печи</div>
+                                    </a>
+                                </div>
+                                <div class="col-6 mt-3 col-md-12">
+                                    <a href="">
+                                        <div class="font-size-16">Пылесосы</div>
+                                    </a>
+                                </div>
+                                <div class="col-6 mt-3 col-md-12">
+                                    <a href="">
+                                        <div class="font-size-16">Плиты</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 my-5 col-12">
+                            <div class="font-size-16">Продукция партнеров</div>
+                            <div class="row">
+                                <div class="col-4 mt-3 col-md-12">
+                                    <a href="">
+                                        <div class="font-size-16">Shivaki</div>
+                                    </a>
+                                </div>
+                                <div class="col-4 mt-3 col-md-12">
+                                    <a href="">
+                                        <div class="font-size-16">Samsung</div>
+                                    </a>
+                                </div>
+                                <div class="col-4 mt-3 col-md-12">
+                                    <a href="">
+                                        <div class="font-size-16">Avalon</div>
+                                    </a>
+                                </div>
+                                <div class="col-4 mt-3 col-md-12">
+                                    <a href="">
+                                        <div class="font-size-16">Royal</div>
+                                    </a>
+                                </div>
+                                <div class="col-4 mt-3 col-md-12">
+                                    <a href="">
+                                        <div class="font-size-16">Вакансии</div>
+                                    </a>
+                                </div>
+                                <div class="col-4 mt-3 col-md-12">
+                                    <a href="">
+                                        <div class="font-size-16">Онлайн CV</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="font-size-12 mb-5">Информация на сайте предоставлена исключительно для
+                                предварительного ознакомления.<br>
+                                Производитель оставляет за собой право на внесение изменений в конструкцию, комплектацию
+                                и дизайн приборов. <br>
+                                Комплектация и дизайн товара могут также варьироваться в зависимости от модели, страны
+                                поставки и предпочтений заказчика.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 desktop pl-5">
+                    <div class="d-flex flex-column pl-5">
+                        <div class="d-flex align-items-center pt-5 pb-4">
+                            <img src="images/qrcode.png" alt="">
+                            <div class="ml-3 l-spacin-n2 font-size-24">
+                                Скачать
+                                приложение Artel
+                            </div>
+                        </div>
+                        <div class="d-flex mb-5">
+                            <img src="images/appstore.png" class="mr-4" alt="">
+                            <img src="images/googleplay.png" alt="">
+                        </div>
+                        <div class="d-flex justify-content-between py-4">
+                            <img src="images/facebook.png" alt="">
+                            <img src="images/instagram.png" alt="">
+                            <img src="images/telegram.png" alt="">
+                        </div>
+                        <button class="btn btn-secondary py-3 my-5 font-size-14 px-1">Скачать весь каталог продукции
+                            <img src="images/download.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<div class="position-absolute bg-success w-100 h-100 ll" style="top: 0; z-index: 2000">
+    <div class="fixed-top d-flex align-items-center justify-content-center w-100" style="height: 100vh;">
+        <div class="loader">
+            <svg width="300" height="294" viewBox="0 0 40 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M36.9016 3.03556V32.948H7.39891L7.59101 32.5776L9.92099 28.1518H4.83966H3.09837V3.03556H36.9016ZM40 0H0V31.1934H4.83966C3.9969 32.7901 3.16034 34.3929 2.31758 35.9896C14.8784 35.9896 27.4392 35.9896 40 35.9896V0Z"></path>
+                <path d="M17.7348 15.2264L25.3444 28.1397H10.1252L17.7348 15.2264ZM17.7348 9.15527L6.67358 27.9332L6.54345 28.1518L4.75879 31.1752H30.7108L17.7348 9.15527Z"></path>
+            </svg>
+        </div>
+    </div>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/src/popover.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/index.js"></script>
+<script src="js/index1.js"></script>
+</body>
+</html>
